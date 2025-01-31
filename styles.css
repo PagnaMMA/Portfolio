@@ -54,7 +54,7 @@
         /* Hero Section */
         .hero {
             padding: 8rem 2rem 4rem;
-            background: linear-gradient(135deg, #007bff, #00bfff);
+            background: linear-gradient(135deg, #000000, #00bfff);
             color: white;
             text-align: center;
         }
@@ -69,7 +69,17 @@
             margin-bottom: 2rem;
             font-weight: 400;
         }
-
+        .hero img {
+            width: 200px;
+            border-radius: 50%;
+            float: left;
+        }
+        .summary h6 h5{
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
         .social-links {
             display: flex;
             justify-content: center;
