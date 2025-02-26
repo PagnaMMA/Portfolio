@@ -130,3 +130,108 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run animation on scroll
     window.addEventListener('scroll', animateTimeline);
   });
+
+  // Enhanced form validation and submission
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const formFields = {
+      name: document.getElementById('name'),
+      email: document.getElementById('email'),
+      subject: document.getElementById('subject'),
+      message: document.getElementById('message')
+    };
+    const formErrors = {};
+    
+    // Create error message elements
+    Object.keys(formFields).forEach(field => {
+      formErrors[field] = document.createElement('div');
+      formErrors[field].className = 'error-message';
+      formFields[field].after(formErrors[field]);
+    });
+    
+    // Validation functions
+    const validators = {
+      name: value => value.trim().length > 2 ? '' : 'Name must be at least 3 characters',
+      email: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Please enter a valid email address',
+      subject: value => value.trim().length > 3 ? '' : 'Subject must be at least 4 characters',
+      message: value => value.trim().length > 10 ? '' : 'Message must be at least 10 characters'
+    };
+    
+    // Live validation as user types
+    Object.keys(formFields).forEach(field => {
+      formFields[field].addEventListener('input', () => {
+        const error = validators[field](formFields[field].value);
+        formErrors[field].textContent = error;
+        formFields[field].classList.toggle('invalid', Boolean(error));
+      });
+    });
+    
+    // Form submission with proper handling
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validate all fields before submission
+        let hasErrors = false;
+        Object.keys(formFields).forEach(field => {
+          const error = validators[field](formFields[field].value);
+          formErrors[field].textContent = error;
+          if (error) {
+            hasErrors = true;
+            formFields[field].classList.add('invalid');
+          }
+        });
+        
+        if (hasErrors) {
+          return;
+        }
+        
+        // Show loading state
+        const submitBtn = document.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+          // Simulated API call (replace with actual endpoint when available)
+          // const response = await fetch('/api/contact', {
+          //   method: 'POST',
+          //   headers: {
+          //     'Content-Type': 'application/json',
+          //   },
+          //   body: JSON.stringify({
+          //     name: formFields.name.value,
+          //     email: formFields.email.value,
+          //     subject: formFields.subject.value,
+          //     message: formFields.message.value
+          //   })
+          // });
+          
+          // if (!response.ok) {
+          //   throw new Error('Network response was not ok');
+          // }
+          
+          // Simulated success for now
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Show success message
+          const successMessage = document.createElement('div');
+          successMessage.className = 'success-message';
+          successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+          contactForm.innerHTML = '';
+          contactForm.appendChild(successMessage);
+          
+        } catch (error) {
+          console.error('Error submitting form:', error);
+          const errorBanner = document.createElement('div');
+          errorBanner.className = 'error-banner';
+          errorBanner.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
+          contactForm.prepend(errorBanner);
+          
+          // Reset button
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  });
