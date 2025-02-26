@@ -42,26 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Scroll-based Navigation Highlight
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 100) { // Increased the offset for better highlighting
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
-
 // Form submission handler
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -150,4 +130,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run animation on scroll
     window.addEventListener('scroll', animateTimeline);
   });
-  
