@@ -291,11 +291,13 @@ body.dark-mode .timeline-date {
 }
   
   .timeline-item:nth-child(odd) .timeline-date {
-    left: calc(50% + 40px);
+    right: calc(50% + 40px);
+    left: auto;
   }
   
   .timeline-item:nth-child(even) .timeline-date {
-    right: calc(50% + 40px);
+    left: calc(50% + 40px);
+    right: auto;
   }
   
   .timeline-content {
@@ -603,8 +605,13 @@ body.dark-mode .contact-info p {
     
     .timeline-item:nth-child(odd) .timeline-date,
     .timeline-item:nth-child(even) .timeline-date {
-      left: 0;
-      right: auto;
+        position: absolute;
+        width: auto;
+        left: 0 !important;
+        right: auto !important;
+        text-align: left;
+        top: -30px; /* Move date above the content box */
+        margin-bottom: 10px;
     }
   }
   
