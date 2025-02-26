@@ -52,6 +52,27 @@ body.dark-mode .resume-btn {
     color: #f0f0f0;
 }
 
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: #007bff;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #007bff, #00bfff);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
@@ -252,20 +273,29 @@ body.dark-mode .resume-btn {
   .timeline-date {
     position: absolute;
     top: 0;
-    width: 120px;
-    padding: 5px 0;
+    width: 150px; /* Increased width for better display */
+    padding: 5px 10px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600; /* Made bolder */
     color: #007bff;
-    font-size: 0.9rem;
-  }
+    font-size: 0.95rem; /* Slightly larger font */
+    background: rgba(255, 255, 255, 0.9); /* Add background for better visibility */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* For dark mode */
+body.dark-mode .timeline-date {
+    color: #4db5ff;
+    background: rgba(45, 45, 45, 0.9);
+}
   
   .timeline-item:nth-child(odd) .timeline-date {
-    left: calc(50% + 30px);
+    left: calc(50% + 40px);
   }
   
   .timeline-item:nth-child(even) .timeline-date {
-    right: calc(50% + 30px);
+    right: calc(50% + 40px);
   }
   
   .timeline-content {
@@ -542,10 +572,11 @@ body.dark-mode .contact-info p {
     }
     
     .timeline-item {
-      justify-content: flex-start;
-      margin-left: 60px;
-      width: calc(100% - 60px);
-    }
+        justify-content: flex-start;
+        margin-left: 60px;
+        width: calc(100% - 60px);
+        margin-bottom: 80px; /* Increase bottom margin for better spacing */
+      }
     
     .timeline-item:nth-child(even) {
       justify-content: flex-start;
@@ -560,14 +591,15 @@ body.dark-mode .contact-info p {
     }
     
     .timeline-date {
-      position: relative;
-      width: 100%;
-      left: 0 !important;
-      right: 0 !important;
-      text-align: left;
-      margin-bottom: 10px;
-      padding-top: 0;
-    }
+        position: absolute;
+        width: auto;
+        left: 0 !important;
+        right: auto !important;
+        text-align: left;
+        top: -30px; /* Move date above the content box */
+        margin-bottom: 10px;
+        padding: 5px 10px;
+      }
     
     .timeline-item:nth-child(odd) .timeline-date,
     .timeline-item:nth-child(even) .timeline-date {
