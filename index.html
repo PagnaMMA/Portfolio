@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mouliom Pagna Portfolio</title>
+    <title>Mohamed Pagna Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-content">
-        <div class="logo">Mohamed Pagna</div>
+        <div class="logo">Mohamed A. M. Pagna</div>
         <div class="nav-links">
           <a href="#home">Home</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <button class="dark-mode-toggle">🌙 Dark Mode</button>
         </div>
         <div class="hamburger">☰</div>
       </div>
@@ -22,72 +24,109 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Mohamed A. M. Pagna</h1>
-
-      <h2>Physicist | Data Scientist | Junior Project Manager</h2>
-      <div class="summary">
-        <h5>
-          I am a physicist with a strong analytical mindset, a data scientist
-          passionate about uncovering insights from complex datasets, and a
-          junior project manager with experience in leading data-driven
-          initiatives. My background in physics has honed my problem-solving
-          skills, while my expertise in machine learning, statistical analysis,
-          and data engineering allows me to translate raw data into actionable
-          business strategies. With a keen eye for detail and a structured
-          approach to problem-solving, I thrive in cross-functional teams,
-          managing projects efficiently while ensuring data-driven
-          decision-making. I am always eager to explore innovative AI solutions
-          and bridge the gap between scientific research, data analytics, and
-          strategic execution.
-        </h5>
-        <h5>
-          Let’s connect and explore how we can leverage data and science to
-          drive impactful solutions!
-        </h5>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/PagnaMMA" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/mohamedpagna" target="_blank"
-          >LinkedIn</a
-        >
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">ML Project in Agriculture</h3>
-            <p>
-              Building a Machine Learning model for crops recomendation in order
-              to helps farmers in decision making
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Data</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Project Management</span>
-            </div>
+      <div class="hero-content">
+        <img src="Figures/Photo_Hackaton_Pagna.jpeg" alt="Mohamed Pagna" class="profile-image" />
+        <div class="hero-text">
+          <h1>Mohamed A. M. Pagna</h1>
+          <h2>Physicist | Data Scientist | Junior Project Manager</h2>
+          <div class="summary">
+            <h5>
+              I am a physicist with a strong analytical mindset, a data scientist
+              passionate about uncovering insights from complex datasets, and a
+              junior project manager with experience in leading data-driven
+              initiatives. My background in physics has honed my problem-solving
+              skills, while my expertise in machine learning, statistical analysis,
+              and data engineering allows me to translate raw data into actionable
+              business strategies. With a keen eye for detail and a structured
+              approach to problem-solving, I thrive in cross-functional teams,
+              managing projects efficiently while ensuring data-driven
+              decision-making. I am always eager to explore innovative AI solutions
+              and bridge the gap between scientific research, data analytics, and
+              strategic execution.
+            </h5>
+            <h5>
+              Let's connect and explore how we can leverage data and science to
+              drive impactful solutions!
+            </h5>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">
-              Building landing pages with HTML5 CSS and JavaScript
-            </h3>
-            <p></p>
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS</span>
-            </div>
+          <div class="social-links">
+            <a href="https://github.com/PagnaMMA" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/mohamedpagna" target="_blank">LinkedIn</a>
+            <a href="Documents/Mouliom_Pagna_CV_uptodate.pdf" class="resume-btn">Download Resume</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section as Timeline -->
+<section id="projects" class="projects">
+  <h2 class="section-title">Projects</h2>
+  
+  <div class="timeline-container">
+    <div class="timeline">
+      <!-- Most recent project -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">February 2025 - Present</div>
+        <div class="timeline-content">
+          <h3 class="project-title">ML Project in Agriculture</h3>
+          <p>
+            Building a Machine Learning model for crops recommendation in order
+            to help farmers in decision making. The model analyzes soil quality,
+            climate conditions, and historical yield data to suggest optimal crop
+            selections.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Project Management</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Second most recent project -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">October 2024 - January 2025</div>
+        <div class="timeline-content">
+          <h3 class="project-title">Building Landing Pages with HTML5, CSS and JavaScript</h3>
+          <p>
+            Designed and developed responsive landing pages for various clients
+            using modern web technologies. Focused on performance optimization,
+            accessibility, and engaging user experiences.
+          </p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Oldest project -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May 2024 - September 2024</div>
+        <div class="timeline-content">
+          <h3 class="project-title">Quantum Physics Simulation</h3>
+          <p>
+            Developed computational models to simulate quantum phenomena using
+            Fortran and MATLAB. The project focused on understanding quantum
+            tunneling effects in semiconductor materials.
+          </p>
+          <div class="project-tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Fortran</span>
+            <span class="tag">Quantum Physics</span>
+            <span class="tag">Simulation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+Last edited just now
     <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="skills-container">
@@ -135,6 +174,63 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <span>mohamed.mouliom@aims-cameroon.org</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <span>+237 695465755</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>Limbe, aims-cameroon</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Mohamed A. M. Pagna. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/PagnaMMA" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/mohamedpagna" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
