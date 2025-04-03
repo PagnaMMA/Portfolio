@@ -34,11 +34,15 @@ body.dark-mode .nav-links button {
 }
 
 body.dark-mode .tag,
-body.dark-mode .skill-item {
+body.dark-mode {
     background: #444;
     color: #ddd;
 }
 
+.skill-item {
+    background: #444;
+    color: #007bff;
+}
 body.dark-mode input,
 body.dark-mode textarea {
     background-color: #333;
@@ -60,6 +64,10 @@ body.dark-mode .resume-btn {
     color: #007bff;
     padding-bottom: 1rem;
 }
+
+.project-tags {
+    color: #007bff
+  }
 
 .section-title::after {
     content: '';
@@ -329,6 +337,7 @@ body.dark-mode .timeline-date {
     flex-wrap: wrap;
     gap: 8px;
   }
+
   
   /* Dark mode styles */
   body.dark-mode .timeline::before {
@@ -348,6 +357,9 @@ body.dark-mode .timeline-date {
     color: #4db5ff;
   }
   
+  .project-tags {
+    color: #007bff
+  }
 /* Skills Section */
 .skills {
     padding: 5rem 2rem;
@@ -389,6 +401,7 @@ body.dark-mode .skills {
 }
 
 .skill-list {
+    color: #007bff;
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -402,6 +415,10 @@ body.dark-mode .skills {
     font-size: 0.875rem;
     transition: background-color 0.3s, color 0.3s;
 }
+
+.project-tags {
+    color: #007bff
+  }
 
 /* Contact Section */
 .contact {

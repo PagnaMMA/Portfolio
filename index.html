@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed Pagna Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <!-- Navigation -->
@@ -13,8 +15,8 @@
         <div class="logo">Mohamed A. M. Pagna</div>
         <div class="nav-links">
           <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <button class="dark-mode-toggle">🌙 Dark Mode</button>
         </div>
@@ -50,15 +52,72 @@
             </h5>
           </div>
           <div class="social-links">
-            <a href="https://github.com/PagnaMMA" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/mohamedpagna" target="_blank">LinkedIn</a>
+            <a href="https://github.com/PagnaMMA" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/mohamedpagna" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
             <a href="Documents/Mouliom_Pagna_CV_uptodate.pdf" class="resume-btn">Download Resume</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section as Timeline -->
+      <!-- Skills Section -->
+<section id="skills" class="skills">
+  <div class="skills-container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3>Physicist</h3>
+        <div class="skill-list">
+          <span class="skill-item"><i class="fas fa-square-root-alt"></i> Matlab</span>
+          <span class="skill-item"><i class="fas fa-atom"></i> Gaussian</span>
+          <span class="skill-item"><i class="fas fa-cogs"></i> Quantum Espresso</span>
+          <span class="skill-item"><i class="fas fa-project-diagram"></i> Comsol Multiphysics</span>
+          <span class="skill-item"><i class="fas fa-code"></i> Fortran</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Data Science</h3>
+        <div class="skill-list">
+          <span class="skill-item"><i class="fas fa-robot"></i> Machine Learning</span>
+          <span class="skill-item"><i class="fas fa-brain"></i> Deep Learning</span>
+          <span class="skill-item"><i class="fas fa-database"></i> SQL</span>
+          <span class="skill-item"><i class="fas fa-table"></i> Pandas</span>
+          <span class="skill-item"><i class="fab fa-python"></i> PyTorch</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Programming</h3>
+        <div class="skill-list">
+          <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+          <span class="skill-item"><i class="fab fa-html5"></i> HTML5/CSS</span>
+          <span class="skill-item"><i class="fas fa-chart-line"></i> R language</span>
+          <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="skill-item"><i class="fas fa-code"></i> C</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools</h3>
+        <div class="skill-list">
+          <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="skill-item"><i class="fas fa-code"></i> VS Code</span>
+          <span class="skill-item"><i class="fas fa-book"></i> Jupyter</span>
+          <span class="skill-item"><i class="fas fa-tasks"></i> MS Project</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section as Timeline -->
 <section id="projects" class="projects">
   <h2 class="section-title">Projects</h2>
   
@@ -67,9 +126,36 @@
       <!-- Most recent project -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
+        <div class="timeline-date">March 2025 - April 2025</div>
+        <div class="timeline-content">
+          <h3 class="project-title">IndabaX Cameroon Competition : Build a Blood Donation Campaign Dashboard</h3>
+          <p>
+            The purpose of this project was to build a comprehensive dashboard, fully implemented in Python, for the
+            visualization and analysis of blood donation campaign data. The dashboard should showcase
+            the richness of the dataset and provide valuable insights for optimizing blood donation
+            campaigns. </br>
+            The dashboard create in Python have to address key questions for
+            campaign organizers, helping them make data-driven decisions to improve the success of future
+            blood donation campaigns.
+          </p>
+          <div class="project-tags">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fas fa-chart-line"></i> Streamlit</span>
+            <span class="tag"><i class="fas fa-chart-bar"></i> Plotly</span>
+            <span class="tag"><i class="fas fa-database"></i> Data</span>
+            <span class="tag"><i class="fas fa-robot"></i> Machine Learning</span>
+            <span class="tag"><i class="fas fa-tasks"></i> Project Management</span>
+        </div>
+        
+          <a href="blood_dashboard.html" class="project-details-btn">View Details</a>
+        </div>
+      </div>
+      <!-- Another recent project -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
         <div class="timeline-date">February 2025 - Present</div>
         <div class="timeline-content">
-          <h3 class="project-title">ML Project in Agriculture</h3>
+          <h3 class="project-title">Machine Learning Project in Agriculture</h3>
           <p>
             Building a Machine Learning model for crops recommendation in order
             to help farmers in decision making. The model analyzes soil quality,
@@ -77,11 +163,13 @@
             selections.
           </p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Data</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Project Management</span>
-          </div>
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fas fa-database"></i> Data</span>
+            <span class="tag"><i class="fas fa-robot"></i> Machine Learning</span>
+            <span class="tag"><i class="fas fa-tasks"></i> Project Management</span>
+        </div>
+          <!-- Include Font Awesome -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
           <a href="project_agriculture_details.html" class="project-details-btn">View Details</a>
         </div>
       </div>
@@ -98,10 +186,14 @@
             accessibility, and engaging user experiences.
           </p>
           <div class="project-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS</span>
-          </div>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+        </div>
+        
+        <!-- Include Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
           <a href="landing_pages_project.html" class="project-details-btn">View Details</a>
         </div>
       </div>
@@ -118,65 +210,20 @@
             tunneling effects in semiconductor materials.
           </p>
           <div class="project-tags">
-            <span class="tag">MATLAB</span>
-            <span class="tag">Fortran</span>
-            <span class="tag">Quantum Physics</span>
-            <span class="tag">Simulation</span>
-          </div>
+            <span class="tag"><i class="fas fa-square-root-alt"></i> MATLAB</span>
+            <span class="tag"><i class="fas fa-code"></i> Fortran</span>
+            <span class="tag"><i class="fas fa-atom"></i> Quantum Physics</span>
+            <span class="tag"><i class="fas fa-project-diagram"></i> Simulation</span>
+        </div>
+        
+        <!-- Include Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
           <a href="quantum_physics_details.html" class="project-details-btn">View Details</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="skills-container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Physicist</h3>
-            <div class="skill-list">
-              <span class="skill-item">Matlab</span>
-              <span class="skill-item">Gaussian</span>
-              <span class="skill-item">Quantum espresso</span>
-              <span class="skill-item">Comsol Multiphysics</span>
-              <span class="skill-item">Fortran</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Data Science</h3>
-            <div class="skill-list">
-              <span class="skill-item">Machine Learning</span>
-              <span class="skill-item">Deep Learning</span>
-              <span class="skill-item">SQL</span>
-              <span class="skill-item">Pandas</span>
-              <span class="skill-item">PyTorch</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Programming</h3>
-            <div class="skill-list">
-              <span class="skill-item">Python</span>
-              <span class="skill-item">HTML5/CSS</span>
-              <span class="skill-item">R language</span>
-              <span class="skill-item">JavaScript</span>
-              <span class="skill-item">C</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <div class="skill-list">
-              <span class="skill-item">Git</span>
-              <span class="skill-item">VS Code</span>
-              <span class="skill-item">Jupyter</span>
-              <span class="skill-item">MS Project</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -229,8 +276,12 @@
       <div class="footer-content">
         <p>&copy; 2025 Mohamed A. M. Pagna. All Rights Reserved.</p>
         <div class="social-links">
-          <a href="https://github.com/PagnaMMA" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/mohamedpagna" target="_blank">LinkedIn</a>
+          <a href="https://github.com/PagnaMMA" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/mohamedpagna" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
     </footer>
